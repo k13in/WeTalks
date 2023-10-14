@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">FirstWork</string>
+    <string name="app_name">WeTalks</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wetalks">WeTalks</string>
+    <string name="contracts">Contracts</string>
+    <string name="discover">Discover</string>
+    <string name="me">Me</string>
 </resources>

@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.klein.firstwork"
+    namespace = "com.klein.wetalks"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.klein.firstwork"
+        applicationId = "com.klein.wetalks"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
