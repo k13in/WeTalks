@@ -17,7 +17,6 @@ public class ChatActivity extends AppCompatActivity {
         String content = getIntent().getStringExtra("content");
         String timestamp = getIntent().getStringExtra("timestamp");
 
-        // 使用这些信息更新UI，例如设置标题或显示消息内容
         TextView senderTextView = findViewById(R.id.textViewForName);
         senderTextView.setText(sender);
     }
