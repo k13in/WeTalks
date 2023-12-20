@@ -20,6 +20,7 @@ public class Fragment1 extends Fragment {
     Context context;
     MessageAdapter messageAdapter;
     List<Message> messages;
+    MessageDAO messageDAO;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,11 +30,13 @@ public class Fragment1 extends Fragment {
         view = inflater.inflate(R.layout.wetalks, container, false);
         recyclerView = view.findViewById(R.id.recyclerview1);
 
-        messages = new ArrayList<>();
-        messages.add(new Message("John", "Hello, how are you?", "10:00 AM"));
-        messages.add(new Message("Alice", "I'm good, thanks!", "10:05 AM"));
+        messageDAO = new MessageDAO(getContext());
 
-        messageAdapter = new MessageAdapter(messages);
+        messages = new ArrayList<>();
+
+        messages = messageDAO.getAllMessages();
+
+        // messageAdapter = new MessageAdapter(messages);
 
         context = getContext();
         messageAdapter = new MessageAdapter(messages);
