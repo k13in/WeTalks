@@ -36,8 +36,6 @@ public class Fragment1 extends Fragment {
 
         messages = messageDAO.getAllMessages();
 
-        // messageAdapter = new MessageAdapter(messages);
-
         context = getContext();
         messageAdapter = new MessageAdapter(messages);
 

@@ -16,7 +16,7 @@
             android:name=".ChatActivity"
             android:exported="false" />
         <activity
-            android:name=".RecyclerViewActivity"
+            android:name=".AddContactActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

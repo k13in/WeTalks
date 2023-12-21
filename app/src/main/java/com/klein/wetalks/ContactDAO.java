@@ -20,8 +20,6 @@ public class ContactDAO {
         openHelper = new ContactOpenHelper(context, "contact.db", null, 1);
         db = openHelper.getWritableDatabase();
         openHelper.onCreate(db);
-        // 插入一条测试数据
-        db.execSQL("insert into contact (name, number) values (?, ?)", new String[]{"k13in", "123456789"});
     }
 
     public ArrayList<Contact> getAllContacts() {
@@ -42,13 +40,10 @@ public class ContactDAO {
         }
     }
 
-    public void insertContact(String name, String number) {
+    public void addContact(Contact contact) {
+        String name = contact.getName();
+        String number = contact.getNumber();
         db.execSQL("insert into contact (name, number) values (?, ?)", new String[]{name, number});
     }
-
-    public void deleteContact(String name) {
-        db.execSQL("delete from contact where name = ?", new String[]{name});
-    }
-
 
 }
