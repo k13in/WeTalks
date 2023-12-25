@@ -21,12 +21,17 @@ public class MessageDAO {
         openHelper = new MessageOpenHelper(context, "message.db", null, 1);
         db = openHelper.getWritableDatabase();
         openHelper.onCreate(db);
-        // 插入一条测试数据
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("sender", "k13in");
-        contentValues.put("content", "在吗？");
-        contentValues.put("timestamp", "2023-12-11 23:59:59");
-        db.insert("message", null, contentValues);
+        // 插入测试数据
+        ContentValues contentValues1 = new ContentValues();
+        contentValues1.put("sender", "小明");
+        contentValues1.put("content", "你好");
+        contentValues1.put("timestamp", "2023-12-11 23:59:59");
+        ContentValues contentValues2 = new ContentValues();
+        contentValues2.put("sender", "小刚");
+        contentValues2.put("content", "Hello");
+        contentValues2.put("timestamp", "2023-12-21 13:51:29");
+        db.insert("message", null, contentValues1);
+        db.insert("message", null, contentValues2);
     }
 
     public ArrayList<Message> getAllMessages() {

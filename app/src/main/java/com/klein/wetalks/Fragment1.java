@@ -24,16 +24,17 @@ public class Fragment1 extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
+                         Bundle savedInstanceState) {
         View view;
         view = inflater.inflate(R.layout.wetalks, container, false);
         recyclerView = view.findViewById(R.id.recyclerview1);
 
+        // 创建一个新的MessageDAO对象
         messageDAO = new MessageDAO(getContext());
 
+        // 初始化消息列表
         messages = new ArrayList<>();
-
+        // 从数据库中获取所有消息
         messages = messageDAO.getAllMessages();
 
         context = getContext();
